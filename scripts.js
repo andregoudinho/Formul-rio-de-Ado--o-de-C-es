@@ -3,7 +3,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     e.preventDefault();
 
     let nome = document.getElementById("nome").value;
-    let email= document.getElementById("email").value;
+    let email = document.getElementById("email").value;
     let telefone = document.getElementById("telefone").value;
     let cpf = document.getElementById("cpf").value;
     let idade = parseInt(document.getElementById("idade").value);
@@ -15,5 +15,19 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     let motivo = document.getElementById("motivo").value;
     let termo = document.getElementById("termo").checked;
     let cpfsExistentes = ["12345678900", "11122233344"];
-    
+
+    if (nome.length < 3) return alert("Nome Inválido");
+    if (!email.includes("@")) return alert("Email inválido");
+    if (telefone.length < 8) return alert("Telefone inválido");
+    if (cpf === "") return alert("CPF é obrigatório");
+    if (cpfsExistentes.includes(cpf)) return alert("CPF já está cadastrado");
+    if (idade < 18) return alert("Você deve ser maior de idade");
+    if (cidade === "") return alert("Cidade obrigatória");
+    if (moradia === "") return alert("Selecione a moradia");
+    if (quintal === "") return alert("Informe sobre o quintal");
+    if (pet === "") return alert("Informe se já teve pet");
+    if (isNaN(horas)) return alert("Horas inválidas");
+    if (motivo.length < 10) return alert("Motivo muito curto");
+    if (!termo) return alert("Aceite o termo");
+
 });
