@@ -15,6 +15,10 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     let motivo = document.getElementById("motivo").value;
     let termo = document.getElementById("termo").checked;
     let cpfsExistentes = ["12345678900", "11122233344"];
+    let condicao = document.getElementById("condicao")?.value;
+    let decisao = document.getElementById("decisao")?.value;
+    let espaco = document.getElementById("espaco")?.value;
+    let motivosInvalidos = ["quero", "porque sim"];
 
     if (nome.length < 3) return alert("Nome Inválido");
     if (!email.includes("@")) return alert("Email inválido");
@@ -29,5 +33,33 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     if (isNaN(horas)) return alert("Horas inválidas");
     if (motivo.length < 10) return alert("Motivo muito curto");
     if (!termo) return alert("Aceite o termo");
+
+    if (moradia === "apartamento" && quintal === "sim") {
+        return alert("Apartamento não pode ter quintal");
+    }
+    if (horas > 8) {
+        alert("O animal ficará muito tempo sozinho!");
+    }
+    if (pet === "nao") {
+        alert("A ONG poderá acompanhar sua adaptação com o pet.");
+    }
+    if (motivosInvalidos.includes(motivo.toLowerCase())) {
+        return alert("Motivo inválido");
+    }
+    if (condicao === "nao") {
+        return alert("Você precisa ter condições financeiras para adotar");
+    }
+    if (decisao === "hoje") {
+        alert("Cuidado com decisões impulsivas");
+    }
+    if (quintal === "nao" && espaco === "sim") {
+        return alert("Não é possível ter espaço externo sem quintal");
+    }
+    if (moradia === "casa" && quintal === "nao") {
+        alert("Verifique se o quintal é seguro para o animal");
+    }
+    if (moradia === "apartamento" && pet === "") {
+        alert("Informe se o local permite animais");
+    }
 
 });
