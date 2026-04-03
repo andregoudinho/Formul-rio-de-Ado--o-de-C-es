@@ -22,7 +22,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
 
     if (nome.length < 3) return alert("Nome Inválido");
     if (!email.includes("@")) return alert("Email inválido");
-    if (telefone.length < 8) return alert("Telefone inválido");
+    if (telefone.length < 10) return alert("Telefone inválido");
     if (cpf === "") return alert("CPF é obrigatório");
     if (cpfsExistentes.includes(cpf)) return alert("CPF já está cadastrado");
     if (idade < 18) return alert("Você deve ser maior de idade");
@@ -58,8 +58,20 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     if (moradia === "casa" && quintal === "nao") {
         alert("Verifique se o quintal é seguro para o animal");
     }
-    if (moradia === "apartamento" && pet === "") {
-        alert("Informe se o local permite animais");
-    }
+
+    document.getElementById("Resultado").innerHTML = `
+    <h3>Dados ENviados: </h3>
+    Nome: ${nome} <br>
+    Email: ${email} <br>
+    Telefone: ${telefone} <br>
+    CPF: ${cpf} <br>
+    Idade: ${idade} <br>
+    Cidade: ${cidade} <br>
+    Moradia: ${moradia} <br>
+    Quintal: ${quintal} <br>
+    Já teve pet: ${pet} <br>
+    Horas sozinho: ${horas} <br>
+    Motivo: ${motivo}
+    `;
 
 });

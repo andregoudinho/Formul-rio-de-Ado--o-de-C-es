@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
     <title>Adoção de Cães</title>
 </head>
 
@@ -53,6 +52,28 @@
 
             <input id="motivo" placeholder="Motivo da Adoção"><br><br>
 
+            <label>Possui condições financeiras?</label>
+            <select id="condicao">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select><br><br>
+
+            <label>Quando decidiu adotar?</label>
+            <select id="decisao">
+                <option value="">Selecione</option>
+                <option value="hoje">Hoje</option>
+                <option value="alguns_dias">Alguns dias</option>
+                <option value="mais_tempo">Já faz tempo</option>
+            </select><br><br>
+
+            <label>Possui espaço externo para o pet?</label>
+            <select id="espaco">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select><br><br>
+
             <div class="termo">
                 <input type="checkbox" id="termo">
                 <label for="termo">Aceito o termo</label>
@@ -66,6 +87,7 @@
 
     </div>
 
+    <script src="scripts.js"></script>
 </body>
 
 </html>
