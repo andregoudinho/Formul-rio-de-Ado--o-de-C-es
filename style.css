@@ -6,7 +6,6 @@ body{
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 form{ 
     width: 80%;
@@ -14,10 +13,13 @@ form{
 }
 h1{
     text-align: center;
-    color: rgb(156, 129, 129);
+    margin-left: 75px;
+    color: red;
+    text-shadow: 2px 2px 5px black;
 }
 h4{
     text-align: center;
+    margin-left: 75px;
     font-size: 20;
     color: white;
 }
@@ -35,4 +37,20 @@ label{
 }
 select{
     margin-left: 20px;
+}
+.termo{
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    color: white;
+}
+.termo input{
+    width: auto;
+}
+button{
+    margin-left: 20px;
+    padding: 10px 20px;
+}
+.container{
+    width: 450px;
 }

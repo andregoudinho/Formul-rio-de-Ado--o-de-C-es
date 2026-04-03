@@ -10,7 +10,7 @@
 
 <body>
 
-    <div>
+    <div class="container">
 
         <h1>Adoção de Cães</h1>
         <h4>Preencha as informações no Formulário</h4>
@@ -53,14 +53,17 @@
 
             <input id="motivo" placeholder="Motivo da Adoção"><br><br>
 
-                <label>
-                    <input type="checkbox" id="termo"> Aceito o termo
-                </label><br><br>
+            <div class="termo">
+                <input type="checkbox" id="termo">
+                <label for="termo">Aceito o termo</label>
+            </div>
+            <br>
 
-                <button type="submit">Enviar</button>
-    
+            <button type="submit">Enviar</button>
 
         </form>
+        <div id="Resultado"></div>
+
     </div>
 
 </body>
