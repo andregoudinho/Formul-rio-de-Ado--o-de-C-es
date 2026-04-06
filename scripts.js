@@ -59,19 +59,21 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
         alert("Verifique se o quintal é seguro para o animal");
     }
 
-    document.getElementById("Resultado").innerHTML = `
-    <h3>Dados ENviados: </h3>
-    Nome: ${nome} <br>
-    Email: ${email} <br>
-    Telefone: ${telefone} <br>
-    CPF: ${cpf} <br>
-    Idade: ${idade} <br>
-    Cidade: ${cidade} <br>
-    Moradia: ${moradia} <br>
-    Quintal: ${quintal} <br>
-    Já teve pet: ${pet} <br>
-    Horas sozinho: ${horas} <br>
-    Motivo: ${motivo}
-    `;
+    alert(`
+        Dados enviados: 
+
+        Nome: ${nome} 
+        Email: ${email} 
+        Telefone: ${telefone} 
+        CPF: ${cpf} 
+        Idade: ${idade} 
+        Cidade: ${cidade} 
+        Moradia: ${moradia} 
+        Quintal: ${quintal} 
+        Já teve pet: ${pet}
+        Horas sozinho: ${horas}
+        Motivo: ${motivo}
+        `);
+    formData.requestFullscreen();
 
 });
